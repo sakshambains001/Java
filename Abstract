@@ -1,0 +1,49 @@
+// Abstract class Bike
+abstract class Bike {
+    abstract void run();   // abstract method
+
+    void start() {         // normal method
+        System.out.println("Bike is starting...");
+    }
+}
+
+// Bike child class
+class Honda extends Bike {
+    void run() {
+        System.out.println("Bike is running...");
+    }
+}
+
+// Abstract class Car
+abstract class Car {
+    abstract void drive();   // abstract method
+
+    void start() {
+        System.out.println("Car is starting...");
+    }
+}
+
+// Car child class
+class BMW extends Car {
+    void drive() {
+        System.out.println("Car is driving...");
+    }
+}
+
+// Main class
+public class Abstract {
+    public static void main(String[] args) {
+        
+        // Bike object
+        Honda bike = new Honda();
+        bike.start();
+        bike.run();
+
+        System.out.println("------------------");
+
+        // Car object
+        BMW car = new BMW();
+        car.start();
+        car.drive();
+    }
+}
